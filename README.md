@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Name (subject to change): Hiking Trail Review Application
 
-Things you may want to cover:
+This application will allow people from the Boston area to find information and write reviews for hiking trails near the area.
 
-* Ruby version
+Group members:
+Nico Foti
+Philip Trostli
+James Sheridan
+Karen Bala
+Matthew Perry
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**************************************************
