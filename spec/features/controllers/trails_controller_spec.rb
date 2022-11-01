@@ -1,10 +1,5 @@
 require "rails_helper"
 
-# verb / action 
-# check the response status 
-# check the response content type 
-# check the attributes of the response body (dont forget the use JSON)
-
 RSpec.describe Api::V1::TrailsController, type: :controller do
 
     describe "GET#index" do

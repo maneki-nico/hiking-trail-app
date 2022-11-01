@@ -1,7 +1,6 @@
 import React from 'react'
 import { Route, Switch, BrowserRouter } from 'react-router-dom'
 import TrailsIndexContainer from './TrailsIndexContainer'
-import TrailShowContainer from './TrailShowContainer'
 
 
 const App = (props) => {
@@ -11,7 +10,6 @@ const App = (props) => {
         <Switch>
           <Route exact path="/" component={TrailsIndexContainer} />
           <Route exact path="/trails" component={TrailsIndexContainer} />
-          <Route exact path="/trails/:trailId" component={TrailShowContainer} />
         </Switch>
       </BrowserRouter>
     </div>
