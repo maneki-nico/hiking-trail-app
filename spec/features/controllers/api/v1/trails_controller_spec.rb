@@ -67,7 +67,7 @@ RSpec.describe Api::V1::TrailsController, type: :controller do
 
         it "should return the specified trail from the database" do
             get :show, params: {id: trail_1.id}
-
+            
             parsed_response = JSON.parse(response.body)
             
             expect(parsed_response["id"]).to eq(trail_1.id)

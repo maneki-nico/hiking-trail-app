@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-trail_1 = Trail.create(
+trail_1 = Trail.find_or_create_by(
     name: "Mt Greylock", 
     city: "Amherst", 
     zip: "01234", 
@@ -17,7 +17,7 @@ trail_1 = Trail.create(
     difficulty: "9",
     description: "A description!"
 )
-trail_2 = Trail.create(
+trail_2 = Trail.find_or_create_by(
     name: "Long, Long Trail", 
     city: "West Stix", 
     zip: "01235", 
@@ -26,4 +26,22 @@ trail_2 = Trail.create(
     elevation: "100m",
     difficulty: "3",
     description: "You wil be lost but happy."
+)
+
+review_1 = Review.find_or_create_by(
+    body: "It was pretty good, loved the walk, for sure!",
+    rating: "4",
+    trail: trail_1
+)
+
+review_2 = Review.find_or_create_by(
+    body: "Bad!",
+    rating: "1",
+    trail: trail_1
+)
+
+review_3 = Review.find_or_create_by(
+    body: "Wow!",
+    rating: "5",
+    trail: trail_2
 )
