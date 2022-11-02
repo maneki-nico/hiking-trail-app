@@ -4,29 +4,23 @@ const TrailShowTile = (props) => {
     return(
         <div>
             <h1>{props.name}</h1>
-            <div>
-                <h3>{props.city}</h3>
-                <p>{props.zip}</p>
-            </div>
-            <div>
-                <ul>
-                    <li>
+            <h3>{props.city}</h3>
+            <p>{props.zip}</p>
+            <ul>
+                <li>
                     Route Type: {props.route_type}
-                    </li>
-                    <li>
+                </li>
+                <li>
                     Elevation: {props.elevation}
-                    </li>
-                    <li>
+                </li>
+                <li>
                     Difficulty: {props.difficulty}
-                    </li>
-                    <li>
+                </li>
+                <li>
                     Length: {props.length}
-                    </li>
-                </ul>
-            </div>
-            <h4>
-                <p>{props.description}</p>
-            </h4>
+                </li>
+            </ul>
+            <p>Description: {props.description}</p>
         </div>
     )
 }
