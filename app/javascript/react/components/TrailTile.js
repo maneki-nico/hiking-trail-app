@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const TrailsTile = (props) => {
     return (
         <div>
-                    {`${props.name} (to be a clickable link)`}  
-                    {`${props.city} ${props.zip}`}
+            <Link to={`/trails/${props.id}`}> {props.name} </Link>
+            {`${props.city} ${props.zip}`}
         </div>
     )
 }
