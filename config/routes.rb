@@ -4,14 +4,12 @@ Rails.application.routes.draw do
 
   get '/trails', to: "static_pages#index"
   get '/trails/:id', to: "static_pages#index"
+  get '/users/:id', to: "static_pages#index"
   
   namespace :api do
     namespace :v1 do
-      resources :trails, only: [:index, :show] do
-        resources :reviews, only: [:index]
-      end
-
-      resources :reviews, only: [:index]
+      resources :trails, only: [:index, :show]
+      resources :users, only: [:show]
     end
   end
 end
