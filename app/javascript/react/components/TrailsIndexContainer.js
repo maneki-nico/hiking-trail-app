@@ -13,7 +13,7 @@ const TrailsIndexContainer = (props) => {
                 throw(error)
             }
             const fetchedTrails = await response.json()
-            setTrails(fetchedTrails)
+            setTrails(fetchedTrails.trails)
         } catch(err) {
             console.error(`Error in fetch: ${err.message}`)
         }
