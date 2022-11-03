@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react"
-import UserShowTile from "./UserShowTile"
 
-const UserShowContainer = (props) => {
+const UserShow = (props) => {
   const [user, setUser] = useState({})
-
   const getUser = async () => {
     try {
       const userId = props.match.params.userId
@@ -14,7 +12,7 @@ const UserShowContainer = (props) => {
         throw(error)
       }
       const fetchedUser = await response.json()
-      setUser(fetchedUser)
+      setUser(fetchedUser.user)
     } catch(err) {
       console.error(`Error in fetch: ${err.message}`)
     }
@@ -24,13 +22,18 @@ const UserShowContainer = (props) => {
     getUser()
   }, [])
 
+  let joinDate
+  if (user.created_at) {
+    const date = new Date(user.created_at)
+    joinDate = date.toLocaleDateString()
+  }
   return (
-    <UserShowTile
-      id={user.id}
-      name={user.username}
-      zip={user.zip}
-    />
+    <div>
+      <h1>{user.username}</h1>
+      <h4>Joined {joinDate}</h4>
+      <h3>Location: {user.zip}</h3>
+    </div>
   )
 }
 
-export default UserShowContainer
+export default UserShow
