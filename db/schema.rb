@@ -19,9 +19,11 @@ ActiveRecord::Schema.define(version: 2022_11_02_173636) do
     t.string "body", null: false
     t.string "rating", null: false
     t.bigint "trail_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["trail_id"], name: "index_reviews_on_trail_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "trails", force: :cascade do |t|

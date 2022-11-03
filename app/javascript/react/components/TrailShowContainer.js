@@ -29,6 +29,7 @@ const TrailShowContainer = (props) => {
     return ( 
         <div>
             <TrailShowTile
+                trail={trail}
                 id={trail.id}
                 name={trail.name}
                 city={trail.city}
