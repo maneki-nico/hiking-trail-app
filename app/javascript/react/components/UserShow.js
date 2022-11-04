@@ -28,10 +28,37 @@ const UserShow = (props) => {
     joinDate = date.toLocaleDateString()
   }
   return (
-    <div>
-      <h1>{user.username}</h1>
-      <h4>Joined {joinDate}</h4>
-      <h3>Location: {user.zip}</h3>
+    <div className="grid-x">
+      <div className="cell small-4">
+        <h2>{user.username}</h2>
+        <h4>Joined {joinDate}</h4>
+        <h4>Location: {user.zip}</h4>
+      </div>
+      <div className="cell auto">
+        <h2>Reviews by {user.username}</h2>
+        <div className="grid-x grid-margin-x">
+          <div className="cell small-4 card">
+            <div className="card-divider">
+              This is a header
+            </div>
+            <img src="https://www.wta.org/site_images/hikes/photo-1.jpg/@@images/fb36ccfc-e929-4520-adf3-408680ac1831.jpeg"></img>
+            <div className="card-section">
+              <h4>This is a card.</h4>
+              <p>It has an easy to override visual style, and is appropriately subdued.</p>
+            </div>
+          </div>
+          <div className="cell small-4 card">
+            <div className="card-divider">
+              This is a header
+            </div>
+            <img src="https://www.wta.org/site_images/hikes/photo-1.jpg/@@images/fb36ccfc-e929-4520-adf3-408680ac1831.jpeg"/>
+            <div className="card-section">
+              <h4>This is a card.</h4>
+              <p>It has an easy to override visual style, and is appropriately subdued.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
