@@ -36,13 +36,13 @@ RSpec.describe Api::V1::TrailsController, type: :controller do
 
             parsed_response = JSON.parse(response.body)
             
-            expect(parsed_response[0]["id"]).to eq(trail_1.id)
-            expect(parsed_response[0]["name"]).to eq(trail_1.name)
-            expect(parsed_response[0]["zip"]).to eq(trail_1.zip)
+            expect(parsed_response["trails"][0]["id"]).to eq(trail_1.id)
+            expect(parsed_response["trails"][0]["name"]).to eq(trail_1.name)
+            expect(parsed_response["trails"][0]["zip"]).to eq(trail_1.zip)
             
-            expect(parsed_response[1]["id"]).to eq(trail_2.id)
-            expect(parsed_response[1]["name"]).to eq(trail_2.name)
-            expect(parsed_response[1]["zip"]).to eq(trail_2.zip)
+            expect(parsed_response["trails"][1]["id"]).to eq(trail_2.id)
+            expect(parsed_response["trails"][1]["name"]).to eq(trail_2.name)
+            expect(parsed_response["trails"][1]["zip"]).to eq(trail_2.zip)
         end
     end
 
@@ -57,6 +57,11 @@ RSpec.describe Api::V1::TrailsController, type: :controller do
             difficulty: "9",
             description: "A description!"
         ) }
+        let!(:review_1) { Review.create(
+            rating: "5",
+            body: "Best trail in western MA",
+            trail: trail_1
+        ) }
 
         it "should return a successful status and content type of json" do
             get :show, params: {id: trail_1.id}
@@ -67,12 +72,22 @@ RSpec.describe Api::V1::TrailsController, type: :controller do
 
         it "should return the specified trail from the database" do
             get :show, params: {id: trail_1.id}
-
+            
             parsed_response = JSON.parse(response.body)
             
-            expect(parsed_response["id"]).to eq(trail_1.id)
-            expect(parsed_response["name"]).to eq(trail_1.name)
-            expect(parsed_response["zip"]).to eq(trail_1.zip)
+            expect(parsed_response["trail"]["id"]).to eq(trail_1.id)
+            expect(parsed_response["trail"]["name"]).to eq(trail_1.name)
+            expect(parsed_response["trail"]["zip"]).to eq(trail_1.zip)
+        end
+
+        it "should return the reviews for the specified trail from the database" do
+            get :show, params: {id: trail_1.id}
+            
+            parsed_response = JSON.parse(response.body)
+            
+            expect(parsed_response["trail"]["reviews"][0]["id"]).to eq(review_1.id)
+            expect(parsed_response["trail"]["reviews"][0]["body"]).to eq(review_1.body)
+            expect(parsed_response["trail"]["reviews"][0]["rating"]).to eq(review_1.rating)
         end
     end
 end

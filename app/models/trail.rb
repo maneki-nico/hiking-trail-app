@@ -7,4 +7,5 @@ class Trail < ApplicationRecord
     validates :difficulty, presence: true
     validates :length, presence: true
     
+    has_many :reviews
 end

@@ -1,26 +1,28 @@
 import React from "react";
 
 const TrailShowTile = (props) => {
+    const trail = props.trail
+    
     return(
         <div>
-            <h1>{props.name}</h1>
-            <h3>{props.city}</h3>
-            <p>{props.zip}</p>
+            <h1>{trail.name}</h1>
+            <h3>{trail.city}</h3>
+            <p>{trail.zip}</p>
             <ul>
                 <li>
-                    Route Type: {props.route_type}
+                    Route Type: {trail.route_type}
                 </li>
                 <li>
-                    Elevation: {props.elevation}
+                    Elevation: {trail.elevation}
                 </li>
                 <li>
-                    Difficulty: {props.difficulty}
+                    Difficulty: {trail.difficulty}
                 </li>
                 <li>
-                    Length: {props.length}
+                    Length: {trail.length}
                 </li>
             </ul>
-            <p>Description: {props.description}</p>
+            <p>Description: {trail.description}</p>
         </div>
     )
 }
