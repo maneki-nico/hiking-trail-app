@@ -1,8 +1,8 @@
 import React from "react";
 
 const TrailShowTile = (props) => {
-    const trail = [...props]
-    debugger
+    const trail = props.trail
+    
     return(
         <div>
             <h1>{trail.name}</h1>

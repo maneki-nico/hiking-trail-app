@@ -25,20 +25,11 @@ const TrailShowContainer = (props) => {
     useEffect(() => {
         getTrail()
     }, [])
-
+    
     return ( 
         <div>
             <TrailShowTile
                 trail={trail}
-                id={trail.id}
-                name={trail.name}
-                city={trail.city}
-                zip={trail.zip}
-                route_type={trail.route_type}
-                length={trail.length}
-                elevation={trail.elevation}
-                difficulty={trail.difficulty}
-                description={trail.description}
             />
             <ReviewsIndexContainer
                 reviews={reviews}
