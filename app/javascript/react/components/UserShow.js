@@ -37,7 +37,7 @@ const UserShow = (props) => {
       <div className="cell auto">
         <h2>Reviews by {user.username}</h2>
         <div className="grid-x grid-margin-x">
-          <div className="cell small-4 card">
+          <div className="cell small-6 card">
             <div className="card-divider">
               This is a header
             </div>
@@ -47,7 +47,7 @@ const UserShow = (props) => {
               <p>It has an easy to override visual style, and is appropriately subdued.</p>
             </div>
           </div>
-          <div className="cell small-4 card">
+          <div className="cell small-6 card">
             <div className="card-divider">
               This is a header
             </div>
