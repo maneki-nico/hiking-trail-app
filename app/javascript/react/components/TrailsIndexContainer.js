@@ -36,7 +36,7 @@ const TrailsIndexContainer = (props) => {
     })
 
     return (
-        <div>
+        <div className="grid-x grid-margin-x">
             {trailsList}
         </div>
     )
