@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ReviewTile from "./ReviewTile";
+import NewReviewFormContainer from "./NewReviewFormContainer";
 
 const ReviewsIndexContainer = (props) => {
 
@@ -7,9 +8,7 @@ const ReviewsIndexContainer = (props) => {
         return (
             <ReviewTile
                 key={review.id}
-                body={review.body}
-                rating={review.rating}
-                created_at={review.created_at}
+                review={review}
             />
         )
     })
@@ -17,6 +16,9 @@ const ReviewsIndexContainer = (props) => {
     return(
         <div>
             {reviewsList}
+            <NewReviewFormContainer
+                postNewReview={props.postNewReview}
+            />
         </div>
     )
 }
