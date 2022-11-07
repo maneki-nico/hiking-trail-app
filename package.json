@@ -2,10 +2,6 @@
   "name": "hiking-trail-app",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "3.5",
-    "prop-types": "~15.6.0",
-    "react": "~16.8.0",
-    "react-dom": "~16.8.0",
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
@@ -16,19 +12,26 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.13.10",
+    "@rails/webpacker": "3.5",
+    "@react-google-maps/api": "^2.16.0",
     "babel-loader": "^8.0.6",
+    "babel-preset-react": "^6.24.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-router-dom": "5.0.0",
+    "react_ujs": "^2.6.2",
     "redbox-react": "1.6.0"
   },
   "devDependencies": {
-    "webpack-dev-server": "^2.11.1",
-    "webpack-cli": "^2.0.10",
+    "@types/jest": "^24.9.0",
     "babel-jest": "^24.9.0",
+    "enzyme": "~3.10.0",
+    "enzyme-adapter-react-16": "~1.14.0",
     "fetch-mock": "~5.13.1",
     "jest": "^24.9.0",
-    "@types/jest": "^24.9.0",
-    "enzyme": "~3.10.0",
-    "enzyme-adapter-react-16": "~1.14.0"
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-server": "^2.11.1"
   },
   "scripts": {
     "start": "./bin/webpack-dev-server",

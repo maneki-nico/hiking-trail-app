@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root 'static_pages#index'
+  get 'places/index'
+  # root 'static_pages#index'
+  root to: 'places#index'
   devise_for :users
 
   get '/trails', to: "static_pages#index"
@@ -10,6 +12,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :trails, only: [:index, :show]
       resources :users, only: [:show]
+      resources :places, only: %i[index]
     end
   end
 end
