@@ -15,14 +15,11 @@ a:hover {
   color:#000;
 }
 .top-bar {
-  background-color: #33402a;
+
+  color: darkblue;
   font-family: sans-serif;
   padding: 20px;
-  background-image: url("https://thumbs.dreamstime.com/b/web-banner-mountains-forest-198430664.jpg");
-  .header-link li {
-    background-color: rgba(0,0,0,0);
-  
-  }
+  background-image: url("https://images.unsplash.com/photo-1450387635522-8ecb968079bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW91bnRhaW4lMjBwYW5vcmFtYXxlbnwwfHwwfHw%3D&w=1000&q=80");
 }
 .slogan {
   font-family: 'Stick No Bills', sans-serif;
@@ -32,6 +29,7 @@ ul.right {
   list-style-type: none;  
   font-family: 'Stick No Bills', sans-serif;
   font-size: 150%;
+  background-color: transparent;
 }
 
 
@@ -58,3 +56,4 @@ h1 {
   bottom: 0;
   height: 100%;
 }
+
