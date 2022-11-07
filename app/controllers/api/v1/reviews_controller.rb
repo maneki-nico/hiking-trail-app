@@ -6,9 +6,9 @@ class Api::V1::ReviewsController < ApiController
         review.user = current_user
 
         if review.save
-            render json: trail
+            render json: review
         else
-            render json: trail
+            render json: review
         end
     end
 

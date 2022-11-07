@@ -47,7 +47,7 @@ const TrailShowContainer = (props) => {
             const postedReview = await response.json()
             setTrail({
                 ...trail,
-                reviews: [...trail.reviews, postedReview]
+                reviews: [...trail.reviews, postedReview.review]
             })
         } catch(err) {
             console.error(`Error in fetch: ${err.message}`)
