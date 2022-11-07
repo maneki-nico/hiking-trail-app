@@ -1,0 +1,60 @@
+body {
+  background-color: #4B5947;
+  color: #778C8C;
+  font-family: sans-serif;
+  
+}
+  
+.grid-x {
+  margin: 20px;
+}
+a {
+  color: #778C8C;
+}
+a:hover {
+  color:#000;
+}
+.top-bar {
+  background-color: #33402a;
+  font-family: sans-serif;
+  padding: 20px;
+  background-image: url("https://thumbs.dreamstime.com/b/web-banner-mountains-forest-198430664.jpg");
+  .header-link li {
+    background-color: rgba(0,0,0,0);
+  
+  }
+}
+.slogan {
+  font-family: 'Stick No Bills', sans-serif;
+  font-size: 120%;
+}
+ul.right {
+  list-style-type: none;  
+  font-family: 'Stick No Bills', sans-serif;
+  font-size: 150%;
+}
+
+
+
+h1 {
+  font-family: 'Stick No Bills', sans-serif;
+  font-size: 300%;
+}
+
+
+.card {
+  background-color: #778C8C;
+  color: #153259;
+}
+
+.card-divider {
+  background-color: #273940;
+  color: #778C8C;
+}
+
+.footer {
+  background-color: #33402a;
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+}
