@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react"
 import TrailsTile from "./TrailTile"
+import FeaturedTrailTile from "./FeaturedTrailTile"
 
 const TrailsIndexContainer = (props) => {
     const [trails, setTrails] = useState([])
+    const [featuredTrail, setFeaturedTrail] = useState({})
 
     const getTrails = async () => {
         try {
@@ -14,6 +16,7 @@ const TrailsIndexContainer = (props) => {
             }
             const fetchedTrails = await response.json()
             setTrails(fetchedTrails.trails)
+            setFeaturedTrail(fetchedTrails.trails[Math.floor(Math.random() * fetchedTrails.trails.length)])
         } catch(err) {
             console.error(`Error in fetch: ${err.message}`)
         }
@@ -35,20 +38,17 @@ const TrailsIndexContainer = (props) => {
         )
     })
 
-    const indexHeader = () => {
-        return (
-            <div>
-                <h1 class="slogan">Get the Ruck Out There</h1>
-            </div>
-        )
-    }
-
     return (
         <div>
-            <div class="head slogan">
-                {indexHeader()}
+            <div className="featured card">
+                <FeaturedTrailTile
+                    featuredTrail={featuredTrail}
+                />
             </div>
-            {trailsList}
+            <h1 class="slogan head">Get the Ruck Out There</h1>
+            <div className="grid-x grid-margin-x">
+                {trailsList}
+            </div>
         </div>
     )
 }

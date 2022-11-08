@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
 body {
   background-color: #1c4641;
   color: #e7f1f1;
   font-family: sans-serif;
 }
-  
 .grid-x {
   margin: 20px;
 }
@@ -11,46 +12,56 @@ a {
   color: #e7f1f1;
 }
 a:hover {
-  color:rgb(65, 124, 107);
+  color:#b3e5e5;
 }
 .top-bar {
-
   color: #e7f1f1;
   font-family: sans-serif;
   padding: 20px;
   background: url(AdobeStock_350683074.jpeg) bottom center;
   background-size: 200%;
+  font-size: 150%;
 }
 .slogan {
-  font-family: 'Stick No Bills', sans-serif;
-  font-size: 120%;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 100%;
 }
 .head {
   text-align: center;
-  font-size: 200%;
+  font-size: 300%;
+}
+.card-divider {
+  a {
+    font-family: 'Stick No Bills', sans-serif;
+  }
+  font-size: 20%;
+  background-color: #273940;
+  color: #FFFF;
 }
 ul.right {
   list-style-type: none;  
   font-family: 'Stick No Bills', sans-serif;
-  font-size: 150%;
+  font-size: 100%;
   background-color: transparent;
 }
-
 h1 {
   font-family: 'Stick No Bills', sans-serif;
   font-size: 300%;
 }
-
 .card {
-  background-color: #778C8C;
-  color: #153259;
-}
+  background-color: #b3e5e5;
+  opacity: 0.75;
 
-.card-divider {
+}
+.featured {
+  opacity: 1;
   background-color: #273940;
-  color: #778C8C;
+  font-family: 'Stick No Bills', sans-serif;
+  color: #FFFF;
 }
-
+.card:hover {
+  opacity: 1;
+}
 footer {
   background-color: #273940;
   position: absolute;
