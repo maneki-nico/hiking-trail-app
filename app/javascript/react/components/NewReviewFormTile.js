@@ -6,10 +6,7 @@ const NewReviewFormTile = (props) => {
         body: ''
     })
 
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        const holdRating = newReview.rating
-        const holdBody = newReview.body
+    const validateForm = () => {
         if (!['1', '2', '3', '4', '5'].includes(newReview.rating)) {
             setNewReview({
                 ...newReview,
@@ -22,13 +19,22 @@ const NewReviewFormTile = (props) => {
                 body: null
             })
         }
-        props.postNewReview(newReview)
-        if (props.posted) {
-            setNewReview({
-                rating: '',
-                body: ''
-            })
-            props.setPosted(false)
+    }
+
+    const clearForm = () => {
+        setNewReview({
+            rating: '',
+            body: ''
+        })
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        const holdRating = newReview.rating
+        const holdBody = newReview.body
+        validateForm()
+        if (props.postNewReview(newReview)) {
+            clearForm()
         } else {
             setNewReview({
                 rating: holdRating,

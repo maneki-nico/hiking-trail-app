@@ -4,11 +4,9 @@ import NewReviewFormTile from './NewReviewFormTile';
 const NewReviewFormContainer = (props) => {
 
     return (
-        <div>
+        <div className="form">
             {props.errors}
             <NewReviewFormTile
-                posted={props.posted}
-                setPosted={props.setPosted}
                 postNewReview={props.postNewReview}
             />
         </div>

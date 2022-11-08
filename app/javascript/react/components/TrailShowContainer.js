@@ -6,7 +6,6 @@ const TrailShowContainer = (props) => {
     const [trail, setTrail] = useState({
         reviews: []
     })
-    const [posted, setPosted] = useState(false)
     const [errors, setErrors] = useState("")
 
     const getTrail = async () => {
@@ -48,9 +47,10 @@ const TrailShowContainer = (props) => {
                     ...trail,
                     reviews: [...trail.reviews, postedReview.review]
                 })
-                setPosted(true)
+                return true
             } else {
                 setErrors(postedReview.errors)
+                return false
             }
         } catch(err) {
             console.error(`Error in fetch: ${err.message}`)
@@ -70,8 +70,6 @@ const TrailShowContainer = (props) => {
                 errors={errors}
                 reviews={trail.reviews}
                 postNewReview={postNewReview}
-                posted={posted}
-                setPosted={setPosted}
             />
         </div>
     )

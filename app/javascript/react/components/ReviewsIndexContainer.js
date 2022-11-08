@@ -17,8 +17,6 @@ const ReviewsIndexContainer = (props) => {
         <div>
             <NewReviewFormContainer
                 errors={props.errors}
-                posted={props.posted}
-                setPosted={props.setPosted}
                 postNewReview={props.postNewReview}
             />
             {reviewsList}
