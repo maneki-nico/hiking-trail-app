@@ -4,16 +4,23 @@ body {
   font-family: sans-serif;
   
 }
-  
+
+.form {
+  width: 45%;
+}
+
 .grid-x {
   margin: 20px;
 }
+
 a {
   color: #778C8C;
 }
+
 a:hover {
   color:#000;
 }
+
 .top-bar {
 
   color: darkblue;
@@ -21,10 +28,12 @@ a:hover {
   padding: 20px;
   background-image: url("https://images.unsplash.com/photo-1450387635522-8ecb968079bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW91bnRhaW4lMjBwYW5vcmFtYXxlbnwwfHwwfHw%3D&w=1000&q=80");
 }
+
 .slogan {
   font-family: 'Stick No Bills', sans-serif;
   font-size: 120%;
 }
+
 ul.right {
   list-style-type: none;  
   font-family: 'Stick No Bills', sans-serif;
@@ -32,13 +41,10 @@ ul.right {
   background-color: transparent;
 }
 
-
-
 h1 {
   font-family: 'Stick No Bills', sans-serif;
   font-size: 300%;
 }
-
 
 .card {
   background-color: #778C8C;
@@ -56,4 +62,3 @@ h1 {
   bottom: 0;
   height: 100%;
 }
-

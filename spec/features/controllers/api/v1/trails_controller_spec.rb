@@ -57,12 +57,18 @@ RSpec.describe Api::V1::TrailsController, type: :controller do
             difficulty: "9",
             description: "A description!"
         ) }
+        let!(:user_1) { User.create(
+            email: "email1@email.com",
+            username: "username",
+            password: "password",
+            zip: "01234"
+        )}
         let!(:review_1) { Review.create(
-            rating: "5",
-            body: "Best trail in western MA",
-            trail: trail_1
+            rating: "4",
+            body: "Great hike! Could have been tidier.",
+            trail: trail_1,
+            user: user_1
         ) }
-
         it "should return a successful status and content type of json" do
             get :show, params: {id: trail_1.id}
 
