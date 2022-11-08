@@ -14,7 +14,7 @@ const ReviewsIndexContainer = (props) => {
     })
 
     return(
-        <div>
+        <div className="review-index">
             <NewReviewFormContainer
                 errors={props.errors}
                 postNewReview={props.postNewReview}
