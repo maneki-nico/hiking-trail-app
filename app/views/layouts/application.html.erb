@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HikingTrailApp</title>
+  <title>Ruck Trails</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   
   <nav class="top-bar">
-    <h1><a href="/">HikingTrailApp</a></h1>
+    <div class="left">
+      <h1><a href="/">Ruck Trails</a></h1>
+      <p class="slogan">Get the Ruck Out There</p>
+    </div>
 
     <section class="top-bar-section">
       <ul class="right">
+        <div class="header-link">
         <%- if current_user -%>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
           <li><a href="/users/<%= current_user.id %>">View My Profile</a></li>
@@ -20,6 +27,7 @@
           <li><%= link_to 'Sign Up', new_user_registration_path %></li>
           <li><%= link_to 'Sign In', new_user_session_path %></li>
         <%- end -%>
+        </div>
       </ul>
     </section>
   </nav>
@@ -43,4 +51,7 @@
   
   <%= yield :extra_footer %>
 </body>
+<div className="footer">
+  <p>HikingTrailApp(TM) All rights reserved.</p>
+</div> 
 </html>
