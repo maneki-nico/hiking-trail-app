@@ -35,8 +35,19 @@ const TrailsIndexContainer = (props) => {
         )
     })
 
+    const indexHeader = () => {
+        return (
+            <div>
+                <h1 class="slogan">Get the Ruck Out There</h1>
+            </div>
+        )
+    }
+
     return (
         <div>
+            <div class="head slogan">
+                {indexHeader()}
+            </div>
             {trailsList}
         </div>
     )

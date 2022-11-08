@@ -1,29 +1,33 @@
 body {
-  background-color: #4B5947;
-  color: #778C8C;
+  background-color: #1c4641;
+  color: #e7f1f1;
   font-family: sans-serif;
-  
 }
   
 .grid-x {
   margin: 20px;
 }
 a {
-  color: #778C8C;
+  color: #e7f1f1;
 }
 a:hover {
-  color:#000;
+  color:rgb(65, 124, 107);
 }
 .top-bar {
 
-  color: darkblue;
+  color: #e7f1f1;
   font-family: sans-serif;
   padding: 20px;
-  background-image: url("https://images.unsplash.com/photo-1450387635522-8ecb968079bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW91bnRhaW4lMjBwYW5vcmFtYXxlbnwwfHwwfHw%3D&w=1000&q=80");
+  background: url(AdobeStock_350683074.jpeg) bottom center;
+  background-size: 200%;
 }
 .slogan {
   font-family: 'Stick No Bills', sans-serif;
   font-size: 120%;
+}
+.head {
+  text-align: center;
+  font-size: 200%;
 }
 ul.right {
   list-style-type: none;  
@@ -32,13 +36,10 @@ ul.right {
   background-color: transparent;
 }
 
-
-
 h1 {
   font-family: 'Stick No Bills', sans-serif;
   font-size: 300%;
 }
-
 
 .card {
   background-color: #778C8C;
@@ -50,10 +51,10 @@ h1 {
   color: #778C8C;
 }
 
-.footer {
-  background-color: #33402a;
+footer {
+  background-color: #273940;
   position: absolute;
   bottom: 0;
-  height: 100%;
+  width: 100%;
 }
 
