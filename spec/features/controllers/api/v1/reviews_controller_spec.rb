@@ -27,47 +27,56 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
         ) }
 
         it "should return a successful status" do
-            get :create, params: {trail_id: trail_1.id, current_user: user_1, review: { rating: "4", body: "Great hike! Could be tidier."}}
+            sign_in(user_1)
+            post :create, params: {trail_id: trail_1.id, current_user: user_1, review: { rating: "4", body: "Great hike! Could be tidier."}}
 
             expect(response.status).to eq(200)
             expect(response.content_type).to eq("application/json")
         end  
 
-        it "should return the successfully added review" do
-            sign_in(user_1)
-            post :create, params: {trail_id: trail_1.id, review: { rating: "4", body: "Great hike! Could have been tidier."}}
-            
-            parsed_response = JSON.parse(response.body)
-            
-            expect(parsed_response["review"]["rating"]).to eq(review_1.rating)
-            expect(parsed_response["review"]["body"]).to eq(review_1.body)
+        context "when a signed in user completes the form correctly and submits" do
+            it "should return the successfully added review" do
+                sign_in(user_1)
+                post :create, params: {trail_id: trail_1.id, review: { rating: "4", body: "Great hike! Could have been tidier."}}
+                
+                parsed_response = JSON.parse(response.body)
+                
+                expect(parsed_response["review"]["rating"]).to eq(review_1.rating)
+                expect(parsed_response["review"]["body"]).to eq(review_1.body)
+            end
         end
 
-        it "should return the blank body error message" do
-            sign_in(user_1)
-            post :create, params: {trail_id: trail_1.id, review: { rating: "4", body: ""}}
-            
-            parsed_response = JSON.parse(response.body)
-            
-            expect(parsed_response["errors"]).to eq("Body can't be blank")
-        end
-
-        it "should return the blank rating error message" do
-            sign_in(user_1)
-            post :create, params: {trail_id: trail_1.id, review: { rating: "", body: "Hmm I can't decide how I feel..."}}
-            
-            parsed_response = JSON.parse(response.body)
-            
-            expect(parsed_response["errors"]).to eq("Rating can't be blank")
-        end
-
-        it "should return the blank rating and body error message" do
-            sign_in(user_1)
-            post :create, params: {trail_id: trail_1.id, review: { rating: "", body: ""}}
-            
-            parsed_response = JSON.parse(response.body)
-            
-            expect(parsed_response["errors"]).to eq("Body can't be blank and Rating can't be blank")
+        context "when the signed in user does not complete the form correctly" do
+            context "with a blank body" do
+                it "should return the blank body error message" do
+                    sign_in(user_1)
+                    post :create, params: {trail_id: trail_1.id, review: { rating: "4", body: ""}}
+                    
+                    parsed_response = JSON.parse(response.body)
+                    
+                    expect(parsed_response["errors"]).to eq("Body can't be blank")
+                end
+            end
+            context "with an unselected rating" do
+                it "should return the blank rating error message" do
+                    sign_in(user_1)
+                    post :create, params: {trail_id: trail_1.id, review: { rating: "", body: "Hmm I can't decide how I feel..."}}
+                    
+                    parsed_response = JSON.parse(response.body)
+                    
+                    expect(parsed_response["errors"]).to eq("Rating can't be blank")
+                end
+            end
+            context "with an unselected rating and a blank body" do
+                it "should return the blank rating and body error message" do
+                    sign_in(user_1)
+                    post :create, params: {trail_id: trail_1.id, review: { rating: "", body: ""}}
+                    
+                    parsed_response = JSON.parse(response.body)
+                    
+                    expect(parsed_response["errors"]).to eq("Body can't be blank and Rating can't be blank")
+                end
+            end
         end
     end
 end
