@@ -1,10 +1,12 @@
 import React from "react";
 
 const ReviewTile = (props) => {
+    const { review } = props
     return (
         <div>
-            Rating: {props.rating}
-            Review: {props.body}
+            {review.user.username}
+            Rating: {review.rating}
+            Review: {review.body}
         </div>
     )
 }
