@@ -9,13 +9,14 @@ const ReviewsIndexContainer = (props) => {
                 key={review.id}
                 body={review.body}
                 rating={review.rating}
+                username={review.user.username}
                 created_at={review.created_at}
             />
         )
     })
 
     return(
-        <div>
+        <div className="column-x review-list">
             {reviewsList}
         </div>
     )

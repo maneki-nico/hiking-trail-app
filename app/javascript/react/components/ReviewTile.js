@@ -2,9 +2,10 @@ import React from "react";
 
 const ReviewTile = (props) => {
     return (
-        <div>
-            Rating: {props.rating}
-            Review: {props.body}
+        <div className="cell small-4 card review-tile">
+            <h5>{props.username}</h5>
+            <p>Rating: {props.rating}</p>
+            <p>Review: {props.body}</p>
         </div>
     )
 }
