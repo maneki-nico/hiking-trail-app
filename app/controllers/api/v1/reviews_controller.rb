@@ -4,11 +4,11 @@ class Api::V1::ReviewsController < ApiController
         trail = Trail.find(params[:trail_id])
         review.trail = trail
         review.user = current_user
-
+        
         if review.save
             render json: review
         else
-            render json: review
+            render json: { errors: review.errors.full_messages.to_sentence }
         end
     end
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 const ReviewTile = (props) => {
-    const review = props.review
+    const { review } = props
     return (
         <div>
             {review.user.username}

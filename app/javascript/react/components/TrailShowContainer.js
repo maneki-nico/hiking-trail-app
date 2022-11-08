@@ -6,6 +6,8 @@ const TrailShowContainer = (props) => {
     const [trail, setTrail] = useState({
         reviews: []
     })
+    const [posted, setPosted] = useState(false)
+    const [errors, setErrors] = useState("")
 
     const getTrail = async () => {
         try {
@@ -22,10 +24,6 @@ const TrailShowContainer = (props) => {
             console.error(`Error in fetch: ${err.message}`)
         }
     }
-    
-    useEffect(() => {
-        getTrail()
-    }, [])
 
     const postNewReview = async (formPayload) => {
         try {
@@ -45,24 +43,35 @@ const TrailShowContainer = (props) => {
                 throw(error)
             }
             const postedReview = await response.json()
-            setTrail({
-                ...trail,
-                reviews: [...trail.reviews, postedReview.review]
-            })
+            if (postedReview.review) {
+                setTrail({
+                    ...trail,
+                    reviews: [...trail.reviews, postedReview.review]
+                })
+                setPosted(true)
+            } else {
+                setErrors(postedReview.errors)
+            }
         } catch(err) {
             console.error(`Error in fetch: ${err.message}`)
         }
     }
     
-
+    useEffect(() => {
+        getTrail()
+    }, [])
+    
     return ( 
         <div>
             <TrailShowTile
                 trail={trail}
             />
             <ReviewsIndexContainer
+                errors={errors}
                 reviews={trail.reviews}
                 postNewReview={postNewReview}
+                posted={posted}
+                setPosted={setPosted}
             />
         </div>
     )
