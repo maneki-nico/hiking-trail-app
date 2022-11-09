@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
 body {
+  background-image: linear-gradient(to right, #052220, #5b958f);
+  background-repeat: initial;
   background-color: #1c4641;
   color: #e7f1f1;
   font-family: sans-serif;
@@ -16,6 +18,7 @@ body {
 
 a {
   color: #e7f1f1;
+  text-shadow: 3px 3px 6px black;
 }
 
 a:hover {
@@ -38,6 +41,10 @@ a:hover {
 .slogan {
   font-family: 'Shadows Into Light', cursive;
   font-size: 100%;
+  text-shadow: -1px 1px 0 #000,
+  1px 1px 0 #000,
+  1px -1px 0 #000,
+  -1px -1px 0 #000;
 }
 
 .head {
@@ -64,10 +71,14 @@ ul.right {
 h1 {
   font-family: 'Stick No Bills', sans-serif;
   font-size: 300%;
+  text-shadow: 3px 3px 6px black;
+
 }
 
 .card {
   background-color: #b3e5e5;
+  box-shadow: 2px 2px black;
+
   opacity: 0.75;
 }
 
@@ -79,7 +90,7 @@ h1 {
 }
 
 .card:hover {
-  opacity: 1;
+  box-shadow: 5px 5px black;
 }
 
 footer {
