@@ -15,3 +15,8 @@
  *= require foundation_and_overrides
 
  */
+
+ .mapContainer {
+   width: 1000px;
+   height: 1000px;
+ }

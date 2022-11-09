@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react"
 import TrailsTile from "./TrailTile"
+import MapTile from "./MapTile.js"
+
 
 const TrailsIndexContainer = (props) => {
     const [trails, setTrails] = useState([])
@@ -38,7 +40,9 @@ const TrailsIndexContainer = (props) => {
     return (
         <div>
             {trailsList}
+            <MapTile />
         </div>
+        
     )
 }
 
