@@ -5,23 +5,18 @@ body {
   color: #e7f1f1;
   font-family: sans-serif;
 }
-
 .form {
   width: 45%;
 }
-
 .grid-x {
   margin: 20px;
 }
-
 a {
   color: #e7f1f1;
 }
-
 a:hover {
   color:#b3e5e5;
 }
-
 .top-bar {
   color: #e7f1f1;
   font-family: sans-serif;
@@ -30,7 +25,6 @@ a:hover {
   background-size: 200%;
   font-size: 150%;
 }
-
 .slogan {
   font-family: 'Shadows Into Light', cursive;
   font-size: 100%;
@@ -47,7 +41,6 @@ a:hover {
   background-color: #273940;
   color: #FFFF;
 }
-
 ul.right {
   list-style-type: none;  
   font-family: 'Stick No Bills', sans-serif;
@@ -73,8 +66,25 @@ h1 {
   opacity: 1;
 }
 footer {
+  text-align: center;
   background-color: #273940;
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  height: 100%;
+  left: 0;
+  right: 0;
+  height: 4%;
+}
+.featured-trail-image {
+  width: 50%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: white;
+}
+.trail-image {
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: white;
 }
