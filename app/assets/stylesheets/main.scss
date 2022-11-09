@@ -27,11 +27,15 @@ a:hover {
 
 .top-bar {
   color: #e7f1f1;
-  font-family: sans-serif;
   padding: 20px;
-  background: url(AdobeStock_350683074.jpeg) bottom center;
-  background-size: 200%;
   font-size: 150%;
+  font-family: sans-serif;
+  background: url(AdobeStock_350683074.jpeg) bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 .slogan {
@@ -42,10 +46,12 @@ a:hover {
   1px -1px 0 #000,
   -1px -1px 0 #000;
 }
+
 .head {
   text-align: center;
   font-size: 300%;
 }
+
 .card-divider {
   a {
     font-family: 'Stick No Bills', sans-serif;
@@ -61,30 +67,38 @@ ul.right {
   font-size: 100%;
   background-color: transparent;
 }
+
 h1 {
   font-family: 'Stick No Bills', sans-serif;
   font-size: 300%;
   text-shadow: 3px 3px 6px black;
 
 }
+
 .card {
   background-color: #b3e5e5;
-  // opacity: 0.75;
   box-shadow: 2px 2px black;
 
+  opacity: 0.75;
 }
+
 .featured {
   opacity: 1;
   background-color: #273940;
   font-family: 'Stick No Bills', sans-serif;
   color: #FFFF;
 }
+
 .card:hover {
   box-shadow: 5px 5px black;
 }
+
 footer {
+  text-align: center;
   background-color: #273940;
-  // position: absolute;
+  position: fixed;
   bottom: 0;
-  height: 100%;
+  left: 0;
+  right: 0;
+  height: 4%;
 }
