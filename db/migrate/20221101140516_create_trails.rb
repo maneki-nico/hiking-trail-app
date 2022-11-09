@@ -4,6 +4,7 @@ class CreateTrails < ActiveRecord::Migration[5.2]
       t.string :name, null: false
       t.string :city, null: false
       t.string :zip, null: false
+      t.text :image_url, null: false
       t.string :route_type, null: false
       t.string :elevation, null: false
       t.string :difficulty, null: false

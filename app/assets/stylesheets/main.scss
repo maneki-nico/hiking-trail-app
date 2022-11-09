@@ -19,11 +19,15 @@ a:hover {
 }
 .top-bar {
   color: #e7f1f1;
-  font-family: sans-serif;
   padding: 20px;
-  background: url(AdobeStock_350683074.jpeg) bottom center;
-  background-size: 200%;
   font-size: 150%;
+  font-family: sans-serif;
+  background: url(AdobeStock_350683074.jpeg) bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 .trail-show {
   margin: 15px;
@@ -46,10 +50,12 @@ a:hover {
   font-family: 'Shadows Into Light', cursive;
   font-size: 100%;
 }
+
 .head {
   text-align: center;
   font-size: 300%;
 }
+
 .card-divider {
   a {
     font-family: 'Stick No Bills', sans-serif;
@@ -58,33 +64,54 @@ a:hover {
   background-color: #273940;
   color: #FFFF;
 }
-
 ul.right {
   list-style-type: none;  
   font-family: 'Stick No Bills', sans-serif;
   font-size: 100%;
   background-color: transparent;
 }
+
 h1 {
   font-family: 'Stick No Bills', sans-serif;
   font-size: 300%;
 }
+
 .card {
   background-color: #b3e5e5;
   opacity: 0.75;
 }
+
 .featured {
   opacity: 1;
   background-color: #273940;
   font-family: 'Stick No Bills', sans-serif;
   color: #FFFF;
 }
+
 .card:hover {
   opacity: 1;
 }
+
 footer {
+  text-align: center;
   background-color: #273940;
-  position: bottom;
+  position: fixed;
   bottom: 0;
-  height: 100%;
+  left: 0;
+  right: 0;
+  height: 4%;
+}
+.featured-trail-image {
+  width: 50%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: white;
+}
+.trail-image {
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: white;
 }
