@@ -27,6 +27,7 @@ const UserShow = (props) => {
     const date = new Date(user.created_at)
     joinDate = date.toLocaleDateString()
   }
+
   return (
     <div className="grid-x">
       <div className="cell small-4">
