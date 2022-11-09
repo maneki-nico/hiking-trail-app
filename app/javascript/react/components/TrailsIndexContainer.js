@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
+import SearchBar from "./SearchBar.js"
 import TrailsTile from "./TrailTile"
 import FeaturedTrailTile from "./FeaturedTrailTile"
+
 
 const TrailsIndexContainer = (props) => {
     const [trails, setTrails] = useState([])
@@ -34,7 +36,7 @@ const TrailsIndexContainer = (props) => {
             />
         )
     })
-
+    
     return (
         <div>
             <div className="featured card">
@@ -43,6 +45,11 @@ const TrailsIndexContainer = (props) => {
                 />
             </div>
             <h1 className="slogan head">Get the Ruck Out There</h1>
+            <div className="search-bar">
+                <SearchBar 
+                    setTrails={setTrails}
+                />
+            </div>
             <div className="grid-x grid-margin-x">
                 {trailsList}
             </div>
