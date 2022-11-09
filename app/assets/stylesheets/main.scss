@@ -5,23 +5,18 @@ body {
   color: #e7f1f1;
   font-family: sans-serif;
 }
-
 .form {
   width: 45%;
 }
-
 .grid-x {
   margin: 20px;
 }
-
 a {
   color: #e7f1f1;
 }
-
 a:hover {
   color:#b3e5e5;
 }
-
 .top-bar {
   color: #e7f1f1;
   font-family: sans-serif;
@@ -30,7 +25,23 @@ a:hover {
   background-size: 200%;
   font-size: 150%;
 }
-
+.trail-show {
+  margin: 15px;
+}
+.form {
+  p {
+    font-size: 18px;
+    color: white;
+  }
+  background-color: rgb(81, 107, 97);
+  padding: 15px;
+  margin: 15px;
+}
+.review-tile {
+  width: 70%;
+  margin: 15px;
+  padding-left: 10px;
+}
 .slogan {
   font-family: 'Shadows Into Light', cursive;
   font-size: 100%;
@@ -61,7 +72,6 @@ h1 {
 .card {
   background-color: #b3e5e5;
   opacity: 0.75;
-
 }
 .featured {
   opacity: 1;
@@ -74,7 +84,7 @@ h1 {
 }
 footer {
   background-color: #273940;
-  position: absolute;
+  position: bottom;
   bottom: 0;
   height: 100%;
 }
