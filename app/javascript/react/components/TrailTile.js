@@ -4,12 +4,8 @@ import { Link } from "react-router-dom";
 const TrailsTile = (props) => {
     const { trail }  = props
 
-    const tileClick = () => {
-        setRedirect(true)
-    }
-
     return (
-            <div className="cell small-6 card" onClick={tileClick}>
+            <div className="cell small-6 card">
                 <Link to={`/trails/${trail.id}`}>
                     <div className="card-divider">
                         <h2>
