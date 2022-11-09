@@ -4,7 +4,7 @@ const TrailShowTile = (props) => {
     const trail = props.trail
     
     return(
-        <div>
+        <div className="trail-show">
             <h1>{trail.name}</h1>
             <h3>{trail.city}</h3>
             <p>{trail.zip}</p>

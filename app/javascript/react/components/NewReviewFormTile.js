@@ -54,7 +54,7 @@ const NewReviewFormTile = (props) => {
     return (
         <form className="" onSubmit={handleSubmit}>
             <label>
-                Rating:
+                <p>Rating:</p>
                 <select name="rating" id="rating" value={newReview.rating} onChange={handleChange}>
                     <option name="rating" id="rating" value="">Select</option>
                     <option name="rating" id="rating" value="1">1</option>
@@ -65,7 +65,7 @@ const NewReviewFormTile = (props) => {
                 </select>
             </label>
             <label>
-                Review:
+                <p>Review:</p>
                 <input 
                     name="body"
                     id="body"

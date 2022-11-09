@@ -6,6 +6,28 @@ body {
   background-color: #1c4641;
   color: #e7f1f1;
   font-family: sans-serif;
+  margin-bottom: 3rem;
+}
+
+.centered {
+  text-align: center;
+  color: #e7f1f1;
+  text-shadow: 3px 3px 6px black;
+  font-family: 'Stick No Bills', sans-serif;
+}
+
+.field {
+  margin: 25px;
+}
+
+.sign-in {
+  background-color: #459591;
+  width: 85%;
+  margin: 30px;
+  padding: 5px;
+  border-radius: 15px;
+  box-shadow: 2px 2px black;
+
 }
 
 .form {
@@ -36,6 +58,26 @@ a:hover {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
+}
+
+.trail-show {
+  margin: 15px;
+}
+
+.form {
+  p {
+    font-size: 18px;
+    color: white;
+  }
+  background-color: rgb(81, 107, 97);
+  padding: 15px;
+  margin: 15px;
+}
+
+.review-tile {
+  width: 70%;
+  margin: 15px;
+  padding-left: 10px;
 }
 
 .slogan {
@@ -78,7 +120,6 @@ h1 {
 .card {
   background-color: #b3e5e5;
   box-shadow: 2px 2px black;
-
   opacity: 0.75;
 }
 
@@ -102,4 +143,20 @@ footer {
   left: 0;
   right: 0;
   height: 4%;
+}
+
+.featured-trail-image {
+  width: 50%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: white;
+}
+
+.trail-image {
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: white;
 }
