@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react"
+import UserReviewTile from "./UserReviewTile"
 
 const UserShow = (props) => {
-  const [user, setUser] = useState({})
+
+  const [user, setUser] = useState({reviews: []})
   const getUser = async () => {
     try {
       const userId = props.match.params.userId
@@ -12,12 +14,12 @@ const UserShow = (props) => {
         throw(error)
       }
       const fetchedUser = await response.json()
-      setUser(fetchedUser.user)
+      setUser({...fetchedUser.user, reviews: [...fetchedUser.user.reviews]})
     } catch(err) {
       console.error(`Error in fetch: ${err.message}`)
     }
   }
-
+  
   useEffect(() => {
     getUser()
   }, [])
@@ -28,6 +30,17 @@ const UserShow = (props) => {
     joinDate = date.toLocaleDateString()
   }
 
+
+
+    const userReviews = user.reviews.map((review) => {
+      return (
+        <UserReviewTile
+          key={review.id}
+          review={review}
+        />
+      )
+    })
+
   return (
     <div className="grid-x">
       <div className="cell small-4">
@@ -37,28 +50,7 @@ const UserShow = (props) => {
       </div>
       <div className="cell auto">
         <h2>Reviews by {user.username}</h2>
-        <div className="grid-x grid-margin-x">
-          <div className="cell small-6 card">
-            <div className="card-divider">
-              This is a header
-            </div>
-            <img src="https://www.wta.org/site_images/hikes/photo-1.jpg/@@images/fb36ccfc-e929-4520-adf3-408680ac1831.jpeg"></img>
-            <div className="card-section">
-              <h4>This is a card.</h4>
-              <p>It has an easy to override visual style, and is appropriately subdued.</p>
-            </div>
-          </div>
-          <div className="cell small-6 card">
-            <div className="card-divider">
-              This is a header
-            </div>
-            <img src="https://www.wta.org/site_images/hikes/photo-1.jpg/@@images/fb36ccfc-e929-4520-adf3-408680ac1831.jpeg"/>
-            <div className="card-section">
-              <h4>This is a card.</h4>
-              <p>It has an easy to override visual style, and is appropriately subdued.</p>
-            </div>
-          </div>
-        </div>
+        {userReviews}
       </div>
     </div>
   )
