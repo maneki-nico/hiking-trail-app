@@ -30,10 +30,7 @@ const TrailsIndexContainer = (props) => {
         return (
             <TrailsTile 
                 key={trail.id}
-                id={trail.id}
-                name={trail.name}
-                city={trail.city}
-                zip={trail.zip}
+                trail={trail}
             />
         )
     })
@@ -45,7 +42,7 @@ const TrailsIndexContainer = (props) => {
                     featuredTrail={featuredTrail}
                 />
             </div>
-            <h1 class="slogan head">Get the Ruck Out There</h1>
+            <h1 className="slogan head">Get the Ruck Out There</h1>
             <div className="grid-x grid-margin-x">
                 {trailsList}
             </div>
