@@ -8,6 +8,27 @@ body {
   font-family: sans-serif;
 }
 
+.centered {
+  text-align: center;
+  color: #e7f1f1;
+  text-shadow: 3px 3px 6px black;
+  font-family: 'Stick No Bills', sans-serif;
+}
+
+.field {
+  margin: 25px;
+}
+
+.sign-in {
+  background-color: #459591;
+  width: 85%;
+  margin: 30px;
+  padding: 5px;
+  border-radius: 15px;
+  box-shadow: 2px 2px black;
+
+}
+
 .form {
   width: 45%;
 }
