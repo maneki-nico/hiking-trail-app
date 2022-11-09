@@ -3,8 +3,11 @@ import ReviewsIndexContainer from "./ReviewsIndexContainer"
 import TrailShowTile from "./TrailShowTile"
 
 const TrailShowContainer = (props) => {
-    const [trail, setTrail] = useState({})
-    const [reviews, setReviews] = useState([]) 
+    const [trail, setTrail] = useState({
+        reviews: []
+    })
+    const [errors, setErrors] = useState("")
+
     const getTrail = async () => {
         try {
             const trailId = props.match.params.trailId
@@ -16,7 +19,39 @@ const TrailShowContainer = (props) => {
             }
             const fetchedTrail = await response.json()
             setTrail(fetchedTrail.trail)
-            setReviews(fetchedTrail.trail.reviews)
+        } catch(err) {
+            console.error(`Error in fetch: ${err.message}`)
+        }
+    }
+
+    const postNewReview = async (formPayload) => {
+        try {
+            const trailId = props.match.params.trailId
+            const response = await fetch(`/api/v1/trails/${trailId}/reviews`, {
+                method: 'POST',
+                credentials: 'same-origin',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formPayload)
+            })
+            if(!response.ok) {
+                const errorMessage = `${response.status} (${response.statusText})`
+                const error = new Error(errorMessage)
+                throw(error)
+            }
+            const postedReview = await response.json()
+            if (postedReview.review) {
+                setTrail({
+                    ...trail,
+                    reviews: [...trail.reviews, postedReview.review]
+                })
+                return true
+            } else {
+                setErrors(postedReview.errors)
+                return false
+            }
         } catch(err) {
             console.error(`Error in fetch: ${err.message}`)
         }
@@ -32,7 +67,9 @@ const TrailShowContainer = (props) => {
                 trail={trail}
             />
             <ReviewsIndexContainer
-                reviews={reviews}
+                errors={errors}
+                reviews={trail.reviews}
+                postNewReview={postNewReview}
             />
         </div>
     )
