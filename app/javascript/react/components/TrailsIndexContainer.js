@@ -39,11 +39,9 @@ const TrailsIndexContainer = (props) => {
     
     return (
         <div>
-            <div className="featured card">
-                <FeaturedTrailTile
-                    featuredTrail={featuredTrail}
-                />
-            </div>
+            <FeaturedTrailTile
+                featuredTrail={featuredTrail}
+            />
             <h1 className="slogan head">Get the Ruck Out There</h1>
             <div className="search-bar">
                 <SearchBar 
