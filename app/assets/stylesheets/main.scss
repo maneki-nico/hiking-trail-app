@@ -9,6 +9,10 @@ body {
   margin-bottom: 3rem;
 }
 
+.make-me-black {
+  color: #0000;
+}
+
 .no-shadow {
   text-shadow: none;
 }
@@ -31,11 +35,7 @@ body {
   margin: 30px;
   padding: 5px;
   border-radius: 15px;
-  box-shadow: 2px 2px black;
-}
-
-.form {
-  width: 45%;
+  box-shadow: 2px 2px #000000;
 }
 
 .grid-x {
@@ -44,7 +44,7 @@ body {
 
 a {
   color: #e7f1f1;
-  text-shadow: 3px 3px 6px black;
+  text-shadow: 3px 3px 6px #000000;
 }
 
 a:hover {
@@ -75,6 +75,10 @@ a:hover {
   }
   padding: 15px;
   margin: 15px;
+  width: 45%;
+  .input.button {
+    text-align: center;
+  }
 }
 
 .slogan {
@@ -119,7 +123,7 @@ ul.right {
 h1 {
   font-family: 'Stick No Bills', sans-serif;
   font-size: 300%;
-  text-shadow: 3px 3px 6px black;
+  text-shadow: 3px 3px 6px #000000;
 }
 
 h4 {
@@ -148,7 +152,7 @@ h4 {
 }
 
 .card:hover {
-  box-shadow: 5px 5px black;
+  box-shadow: 5px 5px #000000;
 }
 
 footer {
@@ -191,7 +195,7 @@ footer {
   margin: 50px auto 20px;
   font-size: 30px;
   color: white;
-  color: rgba(255, 255, 255, 0.95);
+  color: #fffffff2;
   text-align: center;
   text-shadow: 3px 3px 6px black;
 }
@@ -202,10 +206,9 @@ footer {
   line-height: 43px;
   margin: 50px auto 20px;
   font-size: 30px;
-  color: white;
-  color: rgba(255, 255, 255, 0.95);
+  color: #ffffff;
   text-align: center;
-  text-shadow: 3px 3px 6px black;
+  text-shadow: 3px 3px 6px #000000;
 }
 
 .container-name {
@@ -215,17 +218,15 @@ footer {
 }
 
 .button {
-  font-family: 'Shadow Into Light', sans-serif;
-  color: #fff !important;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-decoration: none;
+  text-align: center !important;
+  font-family: 'Shadows Into Light', sans-serif;
+  font-weight: bolder;
+  font-size: 15px;
   background: #72e3dd;
-  padding: 20px;
+  padding: 15px;
   border-radius: 50px;
-  display: inline-block;
-  border: none;
-  transition: all 0.4s ease 0s;
+  transition: 0.4s ease 0s;
+  color: #000000;
 }
 
 .text{
