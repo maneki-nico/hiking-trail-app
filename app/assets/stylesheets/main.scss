@@ -105,6 +105,12 @@ a:hover {
   color: #FFFF;
 }
 
+.index-divider {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
 ul.right {
   list-style-type: none;  
   font-family: 'Stick No Bills', sans-serif;
@@ -248,4 +254,13 @@ footer {
 
 .background{
   background-color: #307073 !important;
+}
+
+.search-bar {
+  width: 70%;
+  margin: auto;
+}
+
+.search {
+  color: white;
 }
