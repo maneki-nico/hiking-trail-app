@@ -25,7 +25,7 @@ const TrailShowTile = (props) => {
                 </ul>
                 <p>Description: {trail.description}</p>
             </div>
-            <div className="cell small-6 trail-image">
+            <div className="cell small-6">
                 <img src={trail.image_url} alt={`image of ${trail.name}`} />
             </div>
         </div>
