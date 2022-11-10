@@ -242,6 +242,9 @@ footer {
   color: white;
 }
 
+.show-page {
+  margin-bottom: 5rem;
+}
 .trail-show {
   background-color: #2A596C;
   border-style: solid;
@@ -249,9 +252,18 @@ footer {
   padding: 2rem;
   margin: 1rem;
   h1 {
-    font-size: 3rem;
+    font-size: 5rem;
   }
   h3 {
+    font-size: 3rem;
+  }
+  ul {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    font-size: 2rem;
+  }
+  p {
+    margin-top: 2rem;
     font-size: 2rem;
   }
   border-radius: 5px;
@@ -278,13 +290,14 @@ footer {
     padding: 1rem;
   }
   border-color: white;
+  border-radius: 5px;
 }
 
 .review-form {
   border-color: white;
   border-style: solid;
   background-color: #2A596C;
-  width: 150%;
+  width: 194%;
   padding: 8px;
   p {
     color: white;
