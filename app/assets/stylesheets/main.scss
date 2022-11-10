@@ -71,8 +71,9 @@ a:hover {
 .card-divider {
   a {
     font-family: 'Stick No Bills', sans-serif;
+    font-size: 300%;
   }
-  font-size: 20%;
+  font-size: 150%;
   background-color: #273940;
   color: #FFFF;
 }
@@ -89,11 +90,14 @@ h1 {
   text-shadow: 3px 3px 6px black;
 
 }
+ 
+h4 {
+  font-size: 110%;
+}
 
 .card {
   background-color: #b3e5e5;
   box-shadow: 2px 2px black;
-
   opacity: 0.75;
 }
 
