@@ -8,7 +8,7 @@ const TrailShowTile = (props) => {
             <div className="cell small-6">
                 <h1>{trail.name}</h1>
                 <h3>{trail.city}</h3>
-                <p>{trail.zip}</p>
+                <h4>{trail.zip}</h4>
                 <ul>
                     <li>
                         Route Type: {trail.route_type}
