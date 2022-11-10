@@ -95,11 +95,13 @@ a:hover {
 }
 
 .card-divider {
-  a {
+  h2 {
     font-family: 'Stick No Bills', sans-serif;
   }
   font-size: 20%;
   background-color: #273940;
+  background-image: url("https://media.istockphoto.com/id/1254825771/vector/line-abstract-background.jpg?b=1&s=612x612&w=0&k=20&c=u7vc6NtyDcBHoGVNBnDtdtrapCEOSxJQZB7nvN238sE=");
+  background-blend-mode: darken;
   color: #FFFF;
 }
 
@@ -121,14 +123,20 @@ h1 {
   background-color: #b3e5e5;
   box-shadow: 2px 2px black;
   opacity: 0.75;
+  border-radius: 15px;
 }
 
 .featured {
   opacity: 1;
   background-color: #273940;
+  background-image: url("https://media.istockphoto.com/id/1254825771/vector/line-abstract-background.jpg?b=1&s=612x612&w=0&k=20&c=u7vc6NtyDcBHoGVNBnDtdtrapCEOSxJQZB7nvN238sE=");
+  background-blend-mode: darken;
   font-family: 'Stick No Bills', sans-serif;
   color: #FFFF;
-  margin: 3rem;
+  margin: auto;
+  margin-top: 2rem;
+  width: 50%;
+  border-radius: 15px;
 }
 
 .card:hover {
