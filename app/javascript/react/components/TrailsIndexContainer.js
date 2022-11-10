@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import SearchBar from "./SearchBar.js"
 import TrailsTile from "./TrailTile"
 import FeaturedTrailTile from "./FeaturedTrailTile"
+import { Link } from "react-router-dom"
 
 
 const TrailsIndexContainer = (props) => {
@@ -51,6 +52,7 @@ const TrailsIndexContainer = (props) => {
             <div className="grid-x grid-margin-x">
                 {trailsList}
             </div>
+            <Link to="/trails/new">Add a Trail</Link>
         </div>
     )
 }

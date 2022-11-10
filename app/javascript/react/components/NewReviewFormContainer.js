@@ -4,7 +4,7 @@ import NewReviewFormTile from './NewReviewFormTile';
 const NewReviewFormContainer = (props) => {
 
     return (
-        <div className="form">
+        <div className="field sign-in">
             {props.errors}
             <NewReviewFormTile
                 postNewReview={props.postNewReview}

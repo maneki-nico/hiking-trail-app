@@ -52,7 +52,7 @@ const NewReviewFormTile = (props) => {
     }
 
     return (
-        <form className="" onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <label>
                 <p>Rating:</p>
                 <select name="rating" id="rating" value={newReview.rating} onChange={handleChange}>
