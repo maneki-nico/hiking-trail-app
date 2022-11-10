@@ -75,7 +75,7 @@ const NewReviewFormTile = (props) => {
                 />
             </label>
 
-            <input type="submit" value="Submit Review"/>
+            <input class="button" type="submit" value="Submit Review"/>
         </form>
     )
 }
