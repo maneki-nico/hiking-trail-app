@@ -62,7 +62,7 @@ const TrailShowContainer = (props) => {
     }, [])
     
     return ( 
-        <div>
+        <div className="show-page">
             <TrailShowTile
                 trail={trail}
             />

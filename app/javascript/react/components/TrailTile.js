@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 const TrailsTile = (props) => {
     const { trail }  = props
 
     return (
-            <div className="cell small-6 card">
+            <div className="cell small-4 card">
                 <Link to={`/trails/${trail.id}`}>
-                    <div className="card-divider">
+                    <div className="card-divider index-divider">
                         <h2>
                             {trail.name}
                         </h2>

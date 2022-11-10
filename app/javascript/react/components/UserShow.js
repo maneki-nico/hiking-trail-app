@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import UserReviewTile from "./UserReviewTile"
+import { Link } from "react-router-dom"
 
 const UserShow = (props) => {
 
@@ -34,10 +35,12 @@ const UserShow = (props) => {
 
     const userReviews = user.reviews.map((review) => {
       return (
-        <UserReviewTile
-          key={review.id}
-          review={review}
-        />
+        <Link to={`/trails/${review.trail.id}`}>
+          <UserReviewTile
+            key={review.id}
+            review={review}
+          />
+        </Link>
       )
     })
 
@@ -48,7 +51,7 @@ const UserShow = (props) => {
         <h4>Joined {joinDate}</h4>
         <h4>Location: {user.zip}</h4>
       </div>
-      <div className="cell auto">
+      <div className="cell small-6">
         <h2>Reviews by {user.username}</h2>
         {userReviews}
       </div>

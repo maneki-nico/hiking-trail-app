@@ -5,7 +5,7 @@ const UserReviewTile = (props) => {
 
   return (
     <div className="grid-x grid-margin-x">
-      <div className="cell small-6 card">
+      <div className="cell small-12 card">
         <div className="card-divider">
           {review.trail.name}
         </div>
