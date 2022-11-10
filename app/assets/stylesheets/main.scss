@@ -32,7 +32,6 @@ body {
 
 .sign-in-and-up {
   background-color: #459591;
-  width: 85%;
   margin: 30px;
   padding: 5px;
   border-radius: 15px;
@@ -82,12 +81,6 @@ a:hover {
   }
 }
 
-.review-tile {
-  width: 70%;
-  margin: 15px;
-  padding-left: 10px;
-}
-
 .slogan {
   font-family: 'Shadows Into Light', cursive;
   font-size: 100%;
@@ -132,7 +125,7 @@ h1 {
   font-size: 300%;
   text-shadow: 3px 3px 6px #000000;
 }
- 
+
 h4 {
   font-size: 110%;
 }
@@ -140,7 +133,8 @@ h4 {
 .card {
   background-color: #b3e5e5;
   border-radius: 15px;
-  border: 1px solid #000000;
+  border: 1px solid black;
+  border-color: white;
 }
 
 .featured {
@@ -154,6 +148,7 @@ h4 {
   margin-top: 2rem;
   width: 50%;
   border-radius: 15px;
+  border-color: white;
 }
 
 .card:hover {
@@ -245,4 +240,67 @@ footer {
 
 .search {
   color: white;
+}
+
+.show-page {
+  margin-bottom: 5rem;
+}
+.trail-show {
+  background-color: #2A596C;
+  border-style: solid;
+  border-color: white;
+  padding: 2rem;
+  margin: 1rem;
+  h1 {
+    font-size: 5rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  ul {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    font-size: 2rem;
+  }
+  p {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+  border-radius: 5px;
+}
+
+.review-index {
+  margin: 1rem;
+  border-radius: 5px;
+  width: 70%;
+}
+
+.review-tile {
+  margin: 2rem;
+  width: 80%;
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 2rem
+  }
+  p {
+    font-size: 200%;
+    margin: 1rem;
+    padding: 1rem;
+  }
+  border-color: white;
+  border-radius: 5px;
+}
+
+.review-form {
+  border-color: white;
+  border-style: solid;
+  background-color: #2A596C;
+  width: 194%;
+  padding: 8px;
+  p {
+    color: white;
+  }
+  border-radius: 5px;
 }
