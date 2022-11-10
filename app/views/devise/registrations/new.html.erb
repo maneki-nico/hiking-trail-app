@@ -1,16 +1,16 @@
 <div class="background">
   <br/>
     <div class="register-title">
-    Trail starts here!
+    The trail starts here.
     </div>
     <div class="register-title1">
-    Sign up!
+    Sign up
     </div>
 
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-  <div class ="textBox">
+  <div class ="textBox sign-in-and-up">
     <div class="container">
       <div class="field">
       <div class="textBox"><%= f.label :email%></div>
@@ -18,7 +18,7 @@
       </div>
     
 
-    <div class="username" >
+    <div class="username field" >
     <%= f.label :username %>
     <%= f.text_field :username, autofocus: true, autocomplete: "username"%>
     </div>
@@ -42,9 +42,12 @@
     </div>
   </div>
 
-<div class="container-name"><a class="button" href="#" target="_blank" rel="nofollow"><button>Sign up</button></a></div>
+<div class="container-name"><a class="button"><button>Create New Account</button></a></div>
   </div>
 <% end %>
 </div>
 
-<%= render "devise/shared/links" %>
+<h3 class="centered">
+  Already have an account?
+  <%= render "devise/shared/links" %>
+</h3>

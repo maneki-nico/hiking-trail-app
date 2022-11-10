@@ -9,6 +9,14 @@ body {
   margin-bottom: 3rem;
 }
 
+.make-me-black {
+  color: #0000;
+}
+
+.no-shadow {
+  text-shadow: none;
+}
+
 .centered {
   text-align: center;
   color: #e7f1f1;
@@ -18,19 +26,16 @@ body {
 
 .field {
   margin: 25px;
+  font-size: 75%;
+  font-weight: bold;
 }
 
-.sign-in {
+.sign-in-and-up {
   background-color: #459591;
-  width: 85%;
   margin: 30px;
   padding: 5px;
   border-radius: 15px;
-  box-shadow: 2px 2px black;
-}
-
-.form {
-  width: 45%;
+  box-shadow: 2px 2px #000000;
 }
 
 .grid-x {
@@ -39,7 +44,7 @@ body {
 
 a {
   color: #e7f1f1;
-  text-shadow: 3px 3px 6px black;
+  text-shadow: 3px 3px 6px #000000;
 }
 
 a:hover {
@@ -68,15 +73,12 @@ a:hover {
     font-size: 18px;
     color: white;
   }
-  background-color: rgb(81, 107, 97);
   padding: 15px;
   margin: 15px;
-}
-
-.review-tile {
-  width: 70%;
-  margin: 15px;
-  padding-left: 10px;
+  width: 45%;
+  .input.button {
+    text-align: center;
+  }
 }
 
 .slogan {
@@ -96,8 +98,8 @@ a:hover {
 .card-divider {
   h2 {
     font-family: 'Stick No Bills', sans-serif;
-    font-size: 300%;
   }
+  font-family: 'Stick No Bills', sans-serif;
   font-size: 150%;
   background-color: #273940;
   background-image: url("https://media.istockphoto.com/id/1254825771/vector/line-abstract-background.jpg?b=1&s=612x612&w=0&k=20&c=u7vc6NtyDcBHoGVNBnDtdtrapCEOSxJQZB7nvN238sE=");
@@ -121,19 +123,18 @@ ul.right {
 h1 {
   font-family: 'Stick No Bills', sans-serif;
   font-size: 300%;
-  text-shadow: 3px 3px 6px black;
-
+  text-shadow: 3px 3px 6px #000000;
 }
- 
+
 h4 {
   font-size: 110%;
 }
 
 .card {
   background-color: #b3e5e5;
-  box-shadow: 2px 2px black;
-  opacity: 0.75;
   border-radius: 15px;
+  border: 1px solid black;
+  border-color: white;
 }
 
 .featured {
@@ -147,10 +148,11 @@ h4 {
   margin-top: 2rem;
   width: 50%;
   border-radius: 15px;
+  border-color: white;
 }
 
 .card:hover {
-  box-shadow: 5px 5px black;
+  box-shadow: 5px 5px #000000;
 }
 
 footer {
@@ -168,8 +170,8 @@ footer {
   height: 50%;
   margin-left: auto;
   margin-right: auto;
-  border-style: solid;
-  border-color: white;
+  border: 3px inset white;
+  border-radius: 5px;
 }
 
 .trail-image {
@@ -180,80 +182,55 @@ footer {
 }
 
 .textBox{
-  font-family: 'Poppins';
   font-size: 25px;
   width: 500px;
-  text-align: center;
   margin-left: auto;
   margin-right: auto;
-  color: #850b0b;
 }
 
 .register-title {
-  font-family: 'Poppins';
+  font-family: 'Stick No Bills', sans-serif;
   width: 270px;
   line-height: 43px;
   margin: 50px auto 20px;
   font-size: 30px;
   color: white;
-  color: rgba(255, 255, 255, 0.95);
+  color: #fffffff2;
   text-align: center;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-  background: #d7604b;
-  border-radius: 3px;
-  background-image: -webkit-linear-gradient(top, #8c1f09, #b3341e);
-  background-image: -moz-linear-gradient(top, #c5bfbd, #d45742);
-  background-image: -o-linear-gradient(top, #57170a, #57170a);
-  background-image: linear-gradient(to bottom, #459591, #459591);
-  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 3px 3px 6px black;
 }
 
 .register-title1 {
-  font-family: 'Poppins';
+  font-family: 'Stick No Bills', sans-serif;
   width: 270px;
   line-height: 43px;
   margin: 50px auto 20px;
   font-size: 30px;
-  color: white;
-  color: rgba(255, 255, 255, 0.95);
+  color: #ffffff;
   text-align: center;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-  background: #d7604b;
-  border-radius: 3px;
-  background-image: -webkit-linear-gradient(top, #8c1f09, #b3341e);
-  background-image: -moz-linear-gradient(top, #c5bfbd, #d45742);
-  background-image: -o-linear-gradient(top, #57170a, #57170a);
-  background-image: linear-gradient(to bottom, #459591, #b5b2b2);
-  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 3px 3px 6px #000000;
 }
 
 .container-name {
   margin-left: 30px;
   margin-top: 60px;
+  text-align: center;
 }
 
 .button {
-  font-family: 'Poppins';
-  color: #fff !important;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-decoration: none;
+  text-align: center !important;
+  font-family: 'Shadows Into Light', sans-serif;
+  font-weight: bolder;
+  font-size: 15px;
   background: #72e3dd;
-  padding: 20px;
+  padding: 15px;
   border-radius: 50px;
-  display: inline-block;
-  border: none;
-  transition: all 0.4s ease 0s;
+  transition: 0.4s ease 0s;
+  color: #000000;
 }
 
 .text{
   color: #b3e5e5;
-}
-
-.background{
-  background-color: #307073 !important;
 }
 
 .search-bar {
@@ -268,4 +245,72 @@ footer {
 #map {
   height: 400px;
   width: 100%;
+}
+
+.show-page {
+  margin-bottom: 5rem;
+}
+
+.trail-show {
+  background-color: #2A596C;
+  border-style: solid;
+  border-color: white;
+  padding: 2rem;
+  margin: 1rem;
+  img {
+    border-style: solid;
+    border-color: white;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  ul {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    font-size: 2rem;
+  }
+  p {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+  border-radius: 5px;
+}
+
+.review-index {
+  margin: 1rem;
+  border-radius: 5px;
+  width: 70%;
+}
+
+.review-tile {
+  margin: 2rem;
+  width: 80%;
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 2rem
+  }
+  p {
+    font-size: 200%;
+    margin: 1rem;
+    padding: 1rem;
+  }
+  border-color: white;
+  border-radius: 5px;
+}
+
+.review-form {
+  border-color: white;
+  border-style: solid;
+  background-color: #2A596C;
+  width: 194%;
+  padding: 8px;
+  p {
+    color: white;
+  }
+  border-radius: 5px;
 }
