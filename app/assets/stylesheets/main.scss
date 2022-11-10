@@ -9,6 +9,10 @@ body {
   margin-bottom: 3rem;
 }
 
+.no-shadow {
+  text-shadow: none;
+}
+
 .centered {
   text-align: center;
   color: #e7f1f1;
@@ -18,9 +22,11 @@ body {
 
 .field {
   margin: 25px;
+  font-size: 75%;
+  font-weight: bold;
 }
 
-.sign-in {
+.sign-in-and-up {
   background-color: #459591;
   width: 85%;
   margin: 30px;
@@ -68,7 +74,6 @@ a:hover {
     font-size: 18px;
     color: white;
   }
-  background-color: rgb(81, 107, 97);
   padding: 15px;
   margin: 15px;
 }
@@ -96,8 +101,8 @@ a:hover {
 .card-divider {
   h2 {
     font-family: 'Stick No Bills', sans-serif;
-    font-size: 300%;
   }
+  font-family: 'Stick No Bills', sans-serif;
   font-size: 150%;
   background-color: #273940;
   background-image: url("https://media.istockphoto.com/id/1254825771/vector/line-abstract-background.jpg?b=1&s=612x612&w=0&k=20&c=u7vc6NtyDcBHoGVNBnDtdtrapCEOSxJQZB7nvN238sE=");
@@ -130,9 +135,8 @@ h4 {
 
 .card {
   background-color: #b3e5e5;
-  box-shadow: 2px 2px black;
-  opacity: 0.75;
   border-radius: 15px;
+  border: 1px solid black;
 }
 
 .featured {
@@ -167,8 +171,8 @@ footer {
   height: 50%;
   margin-left: auto;
   margin-right: auto;
-  border-style: solid;
-  border-color: white;
+  border: 3px inset white;
+  border-radius: 5px;
 }
 
 .trail-image {
@@ -179,17 +183,14 @@ footer {
 }
 
 .textBox{
-  font-family: 'Poppins';
   font-size: 25px;
   width: 500px;
-  text-align: center;
   margin-left: auto;
   margin-right: auto;
-  color: #850b0b;
 }
 
 .register-title {
-  font-family: 'Poppins';
+  font-family: 'Stick No Bills', sans-serif;
   width: 270px;
   line-height: 43px;
   margin: 50px auto 20px;
@@ -197,19 +198,11 @@ footer {
   color: white;
   color: rgba(255, 255, 255, 0.95);
   text-align: center;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-  background: #d7604b;
-  border-radius: 3px;
-  background-image: -webkit-linear-gradient(top, #8c1f09, #b3341e);
-  background-image: -moz-linear-gradient(top, #c5bfbd, #d45742);
-  background-image: -o-linear-gradient(top, #57170a, #57170a);
-  background-image: linear-gradient(to bottom, #459591, #459591);
-  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 3px 3px 6px black;
 }
 
 .register-title1 {
-  font-family: 'Poppins';
+  font-family: 'Stick No Bills', sans-serif;
   width: 270px;
   line-height: 43px;
   margin: 50px auto 20px;
@@ -217,24 +210,17 @@ footer {
   color: white;
   color: rgba(255, 255, 255, 0.95);
   text-align: center;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-  background: #d7604b;
-  border-radius: 3px;
-  background-image: -webkit-linear-gradient(top, #8c1f09, #b3341e);
-  background-image: -moz-linear-gradient(top, #c5bfbd, #d45742);
-  background-image: -o-linear-gradient(top, #57170a, #57170a);
-  background-image: linear-gradient(to bottom, #459591, #b5b2b2);
-  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 3px 3px 6px black;
 }
 
 .container-name {
   margin-left: 30px;
   margin-top: 60px;
+  text-align: center;
 }
 
 .button {
-  font-family: 'Poppins';
+  font-family: 'Shadow Into Light', sans-serif;
   color: #fff !important;
   text-transform: uppercase;
   font-weight: 700;
@@ -249,10 +235,6 @@ footer {
 
 .text{
   color: #b3e5e5;
-}
-
-.background{
-  background-color: #307073 !important;
 }
 
 .search-bar {
