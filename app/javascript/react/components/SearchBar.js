@@ -41,7 +41,7 @@ const SearchBar = (props) => {
       <label className="search">Search for a Trail</label>
       <input type='text' name='searchString' value={searchString} onChange={handleChange} />
 
-      <input class="button" type='submit' value='Let Us Guide You' />
+      <input className="button" type='submit' value='Let Us Guide You' />
     </form>
 
     
