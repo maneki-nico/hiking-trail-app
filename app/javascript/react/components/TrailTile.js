@@ -7,7 +7,7 @@ const TrailsTile = (props) => {
     return (
             <div className="cell small-4 card">
                 <Link to={`/trails/${trail.id}`}>
-                    <div className="card-divider">
+                    <div className="card-divider index-divider">
                         <h2>
                             {trail.name}
                         </h2>
