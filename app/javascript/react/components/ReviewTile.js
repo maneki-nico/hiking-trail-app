@@ -3,9 +3,10 @@ import React from "react";
 const ReviewTile = (props) => {
     const { review } = props
     return (
-        <div className="cell small-4 card review-tile">
-            <h5>{review.user.username}</h5>
-            <p>Rating: {review.rating}</p>
+        <div className="cell card review-tile">
+            <div className="card-divider">
+                <h1>{`${review.user.username}`}<h2>{`Rating: ${review.rating} / 5 Stars`}</h2></h1>
+            </div>
             <p>Review: {review.body}</p>
         </div>
     )
