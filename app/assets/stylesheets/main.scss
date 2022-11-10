@@ -9,6 +9,10 @@ body {
   margin-bottom: 3rem;
 }
 
+.no-shadow {
+  text-shadow: none;
+}
+
 .centered {
   text-align: center;
   color: #e7f1f1;
@@ -97,8 +101,8 @@ a:hover {
 .card-divider {
   h2 {
     font-family: 'Stick No Bills', sans-serif;
-    font-size: 300%;
   }
+  font-family: 'Stick No Bills', sans-serif;
   font-size: 150%;
   background-color: #273940;
   background-image: url("https://media.istockphoto.com/id/1254825771/vector/line-abstract-background.jpg?b=1&s=612x612&w=0&k=20&c=u7vc6NtyDcBHoGVNBnDtdtrapCEOSxJQZB7nvN238sE=");
@@ -126,9 +130,8 @@ h4 {
 
 .card {
   background-color: #b3e5e5;
-  box-shadow: 2px 2px black;
-  opacity: 0.75;
   border-radius: 15px;
+  border: 1px solid black;
 }
 
 .featured {
@@ -163,13 +166,13 @@ footer {
   height: 50%;
   margin-left: auto;
   margin-right: auto;
-  border-style: solid;
-  border-color: white;
+  border: 3px inset white;
+  border-radius: 5px;
 }
 
 .trail-image {
   margin-left: auto;
   margin-right: auto;
-  border-style: solid;
-  border-color: white;
+  border: solid white;
+  border-radius: 7px;
 }
