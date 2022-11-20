@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: breakable-toy
+    name: ruck-trails
     env: ruby
     plan: free
     buildCommand: "./bin/render-build.sh"
