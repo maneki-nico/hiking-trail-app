@@ -114,7 +114,6 @@ review_1 = Review.find_or_create_by(
     rating: "4",
     trail: trail_1,
     user: user_1
-    user_id: user_1.id
 )
 
 review_2 = Review.find_or_create_by(
@@ -122,7 +121,6 @@ review_2 = Review.find_or_create_by(
     rating: "1",
     trail: trail_1,
     user: user_2
-    user_id: user_2.id
 )
 
 review_3 = Review.find_or_create_by(
@@ -130,5 +128,4 @@ review_3 = Review.find_or_create_by(
     rating: "5",
     trail: trail_2,
     user: user_3
-    user_id: user_3.id
 )
