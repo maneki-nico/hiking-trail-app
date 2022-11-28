@@ -80,7 +80,8 @@ test:
 #
 production:
   <<: *default
-  # database: hiking-trail-app_production
+  database: hiking-trail-app_production
+  sslmode: "require"
   url: <%= ENV['DATABASE_URL'] %>
   # username: hiking-trail-app
   # password: <%= ENV['HIKING-TRAIL-APP_DATABASE_PASSWORD'] %>
