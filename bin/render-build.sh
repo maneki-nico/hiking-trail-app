@@ -5,7 +5,6 @@ set -o errexit
 bundle install
 yarn install
 
-cat ../config/database.yml
 echo $DATABASE_URL
 bundle exec rails runner 'puts ActiveRecord::Base.configurations'
 bundle exec rails runner 'puts ActiveRecord::Base.configurations.inspect'
